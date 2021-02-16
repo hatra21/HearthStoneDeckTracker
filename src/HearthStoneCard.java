@@ -12,11 +12,15 @@ public class HearthStoneCard {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name.length() >= 5) {
+            this.name = name;
+        }
+
     }
 
     void display() {
         System.out.println("Name: " + this.name + "\nCost: " + this.cost + "\nAttack: " + this.attack + " Defense: " + this.defense);
         //System.out.format("Name: %s\n Cost:$d Attack: %d Defense: %d\n", this.name,this.cost, this.attack, this.defense);
+        System.out.println();
     }
 }
