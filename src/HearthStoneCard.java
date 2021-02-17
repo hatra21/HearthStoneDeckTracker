@@ -23,4 +23,6 @@ public class HearthStoneCard {
         //System.out.format("Name: %s\n Cost:$d Attack: %d Defense: %d\n", this.name,this.cost, this.attack, this.defense);
         System.out.println();
     }
+
+
 }
