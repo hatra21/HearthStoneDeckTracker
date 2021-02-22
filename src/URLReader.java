@@ -41,5 +41,7 @@ public class URLReader {
         this.theURLContents = line;
     }
 
-
+    public String getTheURLContents() {
+        return theURLContents;
+    }
 }
