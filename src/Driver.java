@@ -29,7 +29,13 @@ public class Driver {
                         int cost_converted = Integer.parseInt(cardData.get("cost").toString());
                         int att_converted = Integer.parseInt(cardData.get("attack").toString());
                         int def_converted = Integer.parseInt(cardData.get("health").toString());
-                        theMinions[i] = new HearthStoneCard(name_converted,cost_converted,att_converted,def_converted);
+                        HearthStoneCard nextItem = new HearthStoneCard(name_converted,cost_converted,att_converted,def_converted);
+                        theMinions[i] = nextItem;
+
+                        //System.out.println(theMinions[i].getName());
+                        displayCards(theMinions[i].getName(),theMinions[i].getCost(), theMinions[i].getAttack(), theMinions[i].getDefense());
+
+
 
 
                         //System.out.println(theMinions[i].toString());
@@ -50,14 +56,19 @@ public class Driver {
 
             }
 
-            System.out.println(count);
+            //System.out.println(count);
 
 
         }
 
 
 
+    }
 
+    public static void displayCards(String name, int cost, int att, int hp) {
+        System.out.println("Minion: " + name);
+        System.out.println("Cost: " + cost + " Attack: " + att + " Defense: " + hp);
+        System.out.println();
     }
 
 
