@@ -65,4 +65,20 @@ public class CardParser {
 
         }
     }
+
+    public void selectionSort() {
+        for (int j=0; j < this.theMinions.size() - 1; j++) {
+            int maxIndex = j;
+
+            for (int i = j+1; i < this.theMinions.size(); i++) {
+                if (theMinions.get(i).getCost() > theMinions.get(maxIndex).getCost()) {
+                    maxIndex = i;
+                }
+            }
+
+            if (maxIndex != j) {
+                this.theMinions.set(j, theMinions.get(maxIndex));
+            }
+        }
+    }
 }
