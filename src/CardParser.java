@@ -81,4 +81,23 @@ public class CardParser {
             }
         }
     }
+
+    public HearthStoneCard binarySearch(int target) {
+        int left = 0;
+        int right = theMinions.size() - 1;
+
+        while (left <= right) {
+            int mid = (left+right) / 2;
+            if (target < theMinions.get(mid).getAttack()) {
+                right = mid - 1;
+            }
+            else if (target > theMinions.get(mid).getAttack()) {
+                left = mid + 1;
+            }
+            else {
+                return theMinions.get(mid);
+            }
+        }
+        return theMinions.get(0);
+    }
 }
